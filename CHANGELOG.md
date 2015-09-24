@@ -1,6 +1,14 @@
 # Braintree iOS SDK Release Notes
 
-## 3.9.3 (2015-08-28)
+## master
+
+* Update README.md and Braintree Demo app for iOS 9 and Xcode 7
+* Update PayPal mSDK to 2.12.1 with bitcode
+* Update Apple Pay support for iOS 9. `BTApplePayPaymentMethod` changes:
+  * Deprecate `ABRecordRef` properties: `billingAddress` and `shippingAddress`
+  * Add `PKContact` properties: `billingContact` and `shippingContact`
+
+## 3.9.3 (2015-08-31)
 
 * Xcode 7 support
 * Improved Swift interface with nullability annotations and lightweight generics
@@ -18,16 +26,11 @@
   * Braintree iOS SDK now vendors Coinbase SDK
 * Add session ID to analytics tracking data
 * Add `BTPayPalScopeAddress`
-* Update PayPal mSDK to 2.11.1
+* Update PayPal mSDK to 2.11.1-bt1
   * Requires Xcode 6.3+
   * Fix an iPad display issue
   * Improve mSDK screen blurring when app is backgrounded. NOTE: This change requires that you add `Accelerate.framework` to your project
-  * Update card.io library to 5.0.6
   * Bug fixes
-
-## 3.9.1 (2015-06-12)
-
-* Merge public master
 
 ## 3.9.0 (2015-06-12)
 
@@ -137,7 +140,7 @@
 
       If your build breaks due to this change, you can re-add card.io to your project's Podfile: 
 
-          pod 'CardIO', '~> 4.0'`
+          pod 'CardIO', '~> 4.0'
 
       And adjust your card.io imports to:
 
